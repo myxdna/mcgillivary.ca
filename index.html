@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andrew McGillivary</title>
-<meta name="description" content="Andrew McGillivary — Director of GTM AI at Knak, Ottawa. Outbound systems, scoring models and AI tooling for go-to-market teams, plus side projects in games, hardware and local AI.">
+<meta name="description" content="Andrew McGillivary — Director of GTM AI at Knak, Ottawa. Full-stack: AI systems, apps and AWS infrastructure as code. Outbound systems, scoring models and AI tooling for go-to-market teams, plus side projects in games, hardware and local AI.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2310b981'/><text x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%23051b13'>am</text></svg>">
 <style>
   :root {
@@ -135,7 +135,7 @@
     <div class="prompt">~/ottawa $ whoami</div>
     <h1>Andrew McGillivary</h1>
     <p class="role">Director of GTM AI at <a href="https://knak.com">Knak</a></p>
-    <p class="lede">I build the AI systems behind Knak's go-to-market team — outbound pipelines, scoring models, call analytics and agent tooling — and write up how each one works. On my own time I build multiplayer games, small hardware and local AI.</p>
+    <p class="lede">Full-stack builder of the AI systems behind Knak's go-to-market team — outbound pipelines, scoring models, call analytics and agent tooling — from the code to the AWS infrastructure they run on. I write up how each one works. On my own time I build multiplayer games, small hardware and local AI.</p>
     <div class="links">
       <a class="btn primary" href="https://andymcgillivary.substack.com/">Read the build log</a>
       <a class="btn" href="#projects">Side projects</a>
@@ -146,11 +146,11 @@
   <section id="gtm">
     <h2>GTM AI</h2>
     <div class="gtm-intro">
-      <p>My day job is turning go-to-market work into systems: outbound pipelines that find and score accounts from public signals, models that read sales calls at scale, and AI tools that help reps practise and prepare. I publish a build log of each one — the tools, the prompts, the architecture and what it costs — so other teams can take them.</p>
+      <p>My day job is turning go-to-market work into systems: outbound pipelines that find and score accounts from public signals, models that read sales calls at scale, and AI tools that help reps practise and prepare. I build them end to end: front end, back end, data, and the AWS infrastructure as code that deploys them. I publish a build log of each one — the tools, the prompts, the architecture and what it costs — so other teams can take them.</p>
       <ul class="facts">
         <li><b>Substack</b> <a href="https://andymcgillivary.substack.com/">andymcgillivary.substack.com</a></li>
         <li><b>GTM wiki</b> a 145-entry knowledge base of patterns, experiments and build logs, wired into Claude Code to answer questions and draft in my voice</li>
-        <li><b>Stack</b> Claude, OpenAI Realtime, Snowflake, pgvector, Cloudflare Workers</li>
+        <li><b>Stack</b> Claude, OpenAI Realtime, Snowflake, pgvector, TypeScript, Laravel, AWS (ECS Fargate, IaC), Cloudflare Workers</li>
       </ul>
     </div>
     <div class="posts">
@@ -168,21 +168,6 @@
         <span class="date">May 2026</span>
         <h3>Subscribing to 2,300 prospects' marketing programs</h3>
         <p>Reading what prospects actually ship as a pain signal. One harvest, two outputs: a score and an audit write-up, at ~$0.002 per domain.</p>
-      </a>
-      <a class="post" href="https://andymcgillivary.substack.com/p/i-needed-an-inbox-for-ai-agents-built">
-        <span class="date">May 2026</span>
-        <h3>An inbox for AI agents, for the cost of a domain</h3>
-        <p>Cloudflare Email Routing, a small Worker and R2, with slug routing on the local part. The free tier covers typical agent volume.</p>
-      </a>
-      <a class="post" href="https://andymcgillivary.substack.com/p/i-couldnt-slice-our-call-data-by">
-        <span class="date">May 2026</span>
-        <h3>A query layer over our sales calls</h3>
-        <p>Snowflake, Claude extractions and pgvector over structured summaries, to answer the cross-segment questions the recording tool couldn't.</p>
-      </a>
-      <a class="post" href="https://andymcgillivary.substack.com/p/three-days-one-orchestration-prompt">
-        <span class="date">May 2026</span>
-        <h3>Three days, one role-play tool</h3>
-        <p>A cold-call practice tool: realtime voice, personas built from real call data, and scoring against our methodology. Prompt, architecture and cost.</p>
       </a>
     </div>
     <a class="more" href="https://andymcgillivary.substack.com/">All posts on Substack →</a>
@@ -254,8 +239,8 @@
       </div>
       <ul class="stack">
         <li><b>languages</b> TypeScript, Java, Python, C++</li>
-        <li><b>web</b> Node, WebSockets, Vite</li>
-        <li><b>infra</b> Docker, Cloudflare, Linux</li>
+        <li><b>web</b> Node, Laravel, WebSockets, Vite</li>
+        <li><b>infra</b> AWS + IaC, Docker, Cloudflare, Linux</li>
         <li><b>hardware</b> ESP32, Raspberry Pi</li>
         <li><b>gtm</b> Snowflake, Gong data, outbound tooling</li>
         <li><b>ai</b> Claude, OpenAI, Ollama, local GPUs</li>
