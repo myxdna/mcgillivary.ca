@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andrew McGillivary</title>
-<meta name="description" content="Andrew McGillivary — developer and homelab tinkerer in Ottawa. Browser games, automation bots, hardware projects and local AI.">
+<meta name="description" content="Andrew McGillivary — Director of GTM AI at Knak, Ottawa. Outbound systems, scoring models and AI tooling for go-to-market teams, plus side projects in games, hardware and local AI.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2310b981'/><text x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%23051b13'>am</text></svg>">
 <style>
   :root {
@@ -94,6 +94,25 @@
     .hero { padding: 40px 0 48px; }
   }
 
+
+  .role { margin-top: 10px; font: 600 15px var(--mono); color: var(--accent); }
+  .role a { text-decoration: none; border-bottom: 1px solid currentColor; }
+  .gtm-intro { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; margin-bottom: 28px; }
+  .gtm-intro > p { color: var(--muted); }
+  .facts { list-style: none; font-size: 14px; color: var(--muted); }
+  .facts li + li { margin-top: 12px; }
+  .facts b { display: block; font: 600 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--text); }
+  .facts a { color: var(--accent); }
+  .posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+  .post { display: block; text-decoration: none; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; transition: border-color .15s, transform .15s; }
+  .post:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .post .date { font: 12px var(--mono); color: var(--faint); }
+  .post h3 { font-size: 16px; line-height: 1.35; margin-top: 6px; letter-spacing: -0.01em; }
+  .post p { margin-top: 8px; font-size: 14px; color: var(--muted); }
+  .more { display: inline-block; margin-top: 20px; font: 14px var(--mono); color: var(--accent); text-decoration: none; }
+  .more:hover { text-decoration: underline; }
+  @media (max-width: 640px) { .gtm-intro { grid-template-columns: 1fr; gap: 20px; } }
+
   footer { padding: 36px 0 48px; border-top: 1px solid var(--border); font: 13px var(--mono); color: var(--faint); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
   footer a { color: var(--muted); text-decoration: none; }
   footer a:hover { color: var(--accent); }
@@ -105,6 +124,7 @@
   <header>
     <a class="logo" href="/">mcgillivary<span>.ca</span></a>
     <nav>
+      <a href="#gtm">gtm ai</a>
       <a href="#projects">projects</a>
       <a href="#about">about</a>
       <a href="https://github.com/myxdna">github</a>
@@ -114,15 +134,62 @@
   <div class="hero">
     <div class="prompt">~/ottawa $ whoami</div>
     <h1>Andrew McGillivary</h1>
-    <p class="lede">I build things that run in the browser, on the edge of my home network, and on a GPU under my desk — multiplayer games, automation bots, small hardware, and local AI tooling.</p>
+    <p class="role">Director of GTM AI at <a href="https://knak.com">Knak</a></p>
+    <p class="lede">I build the AI systems behind Knak's go-to-market team — outbound pipelines, scoring models, call analytics and agent tooling — and write up how each one works. On my own time I build multiplayer games, small hardware and local AI.</p>
     <div class="links">
-      <a class="btn primary" href="#projects">See projects</a>
+      <a class="btn primary" href="https://andymcgillivary.substack.com/">Read the build log</a>
+      <a class="btn" href="#projects">Side projects</a>
       <a class="btn" href="https://github.com/myxdna">github.com/myxdna</a>
     </div>
   </div>
 
+  <section id="gtm">
+    <h2>GTM AI</h2>
+    <div class="gtm-intro">
+      <p>My day job is turning go-to-market work into systems: outbound pipelines that find and score accounts from public signals, models that read sales calls at scale, and AI tools that help reps practise and prepare. I publish a build log of each one — the tools, the prompts, the architecture and what it costs — so other teams can take them.</p>
+      <ul class="facts">
+        <li><b>Substack</b> <a href="https://andymcgillivary.substack.com/">andymcgillivary.substack.com</a></li>
+        <li><b>GTM wiki</b> a 145-entry knowledge base of patterns, experiments and build logs, wired into Claude Code to answer questions and draft in my voice</li>
+        <li><b>Stack</b> Claude, OpenAI Realtime, Snowflake, pgvector, Cloudflare Workers</li>
+      </ul>
+    </div>
+    <div class="posts">
+      <a class="post" href="https://andymcgillivary.substack.com/p/not-all-pain-converts">
+        <span class="date">Jun 2026</span>
+        <h3>Not all pain converts</h3>
+        <p>From a talk: mining your own sales calls for the pains that actually predict a win, then turning them into public signals you can target.</p>
+      </a>
+      <a class="post" href="https://andymcgillivary.substack.com/p/a-simple-way-to-think-about-finding">
+        <span class="date">Jun 2026</span>
+        <h3>Finding buyers in public data</h3>
+        <p>A simple mental model for signal-based targeting, and the mistake that almost made my version useless.</p>
+      </a>
+      <a class="post" href="https://andymcgillivary.substack.com/p/i-wanted-to-read-what-my-prospects">
+        <span class="date">May 2026</span>
+        <h3>Subscribing to 2,300 prospects' marketing programs</h3>
+        <p>Reading what prospects actually ship as a pain signal. One harvest, two outputs: a score and an audit write-up, at ~$0.002 per domain.</p>
+      </a>
+      <a class="post" href="https://andymcgillivary.substack.com/p/i-needed-an-inbox-for-ai-agents-built">
+        <span class="date">May 2026</span>
+        <h3>An inbox for AI agents, for the cost of a domain</h3>
+        <p>Cloudflare Email Routing, a small Worker and R2, with slug routing on the local part. The free tier covers typical agent volume.</p>
+      </a>
+      <a class="post" href="https://andymcgillivary.substack.com/p/i-couldnt-slice-our-call-data-by">
+        <span class="date">May 2026</span>
+        <h3>A query layer over our sales calls</h3>
+        <p>Snowflake, Claude extractions and pgvector over structured summaries, to answer the cross-segment questions the recording tool couldn't.</p>
+      </a>
+      <a class="post" href="https://andymcgillivary.substack.com/p/three-days-one-orchestration-prompt">
+        <span class="date">May 2026</span>
+        <h3>Three days, one role-play tool</h3>
+        <p>A cold-call practice tool: realtime voice, personas built from real call data, and scoring against our methodology. Prompt, architecture and cost.</p>
+      </a>
+    </div>
+    <a class="more" href="https://andymcgillivary.substack.com/">All posts on Substack →</a>
+  </section>
+
   <section id="projects">
-    <h2>Selected projects</h2>
+    <h2>Side projects</h2>
     <div class="grid">
 
       <article class="card">
@@ -182,7 +249,7 @@
     <h2>About</h2>
     <div class="about">
       <div>
-        <p>I'm based in Ottawa, Canada. Most of my side projects start with a small annoyance — a campsite that's always booked, a kid who can't decide on lunch, a card game I want to play with friends in other cities — and end with something running on hardware at home.</p>
+        <p>I'm based in Ottawa, Canada, and lead GTM AI at Knak, where I get to build a lot of cool stuff. Most of my side projects start with a small annoyance — a campsite that's always booked, a kid who can't decide on lunch, a card game I want to play with friends in other cities — and end with something running on hardware at home.</p>
         <p>I like shipping working software quickly, then making it reliable.</p>
       </div>
       <ul class="stack">
@@ -190,14 +257,15 @@
         <li><b>web</b> Node, WebSockets, Vite</li>
         <li><b>infra</b> Docker, Cloudflare, Linux</li>
         <li><b>hardware</b> ESP32, Raspberry Pi</li>
-        <li><b>ai</b> Ollama, local GPUs, Claude</li>
+        <li><b>gtm</b> Snowflake, Gong data, outbound tooling</li>
+        <li><b>ai</b> Claude, OpenAI, Ollama, local GPUs</li>
       </ul>
     </div>
   </section>
 
   <footer>
     <span>© <span id="y">2026</span> Andrew McGillivary</span>
-    <span><a href="https://github.com/myxdna">GitHub</a></span>
+    <span><a href="https://andymcgillivary.substack.com/">Substack</a> · <a href="https://github.com/myxdna">GitHub</a></span>
   </footer>
 
 </div>
